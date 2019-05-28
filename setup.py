@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="tageos",
+    name="peer_socket",
     version="0.0.1",
     author="Benjamin Fischer",
     author_email="benjamin.fischr@gmail.com",
