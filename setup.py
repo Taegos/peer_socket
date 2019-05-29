@@ -12,7 +12,9 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/Taegos/peer_socket",
+    download_url="https://github.com/Taegos/peer_socket/archive/0.0.1.tar.gz",
     packages=setuptools.find_packages(),
+    install_requires=["jsonpickle"],
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
