@@ -2,7 +2,7 @@
 import socket
 import jsonpickle
 from threading import Thread
-from socket_message import SocketMessage
+from peer_socket.socket_message import SocketMessage
 
 
 class PeerSocket:
