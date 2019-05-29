@@ -29,10 +29,7 @@ class PeerSocket:
                 json = buffer.decode('UTF-8')
                 message = jsonpickle.decode(json)
                 self.__debug('Got request ' + message.event + ' from peer ' + str(message.sender_addr) + '.')
-               # self.sender_addr = message.sender_addr
                 response = self.callbacks[message.event](message.sender_addr, message.payload)
-               # self.sender_addr = ()
-               # response = SocketMessage(self.addr, response[0], response[1])
                 json = jsonpickle.encode(response)
                 buffer = json.encode('UTF-8')
                 conn.send(buffer)
@@ -55,6 +52,4 @@ class PeerSocket:
             json = buffer.decode('UTF-8')
             message = jsonpickle.decode(json)
             self.__debug('Got response from peer ' + str(dest_addr) + '.')
-            #self.sender_addr = dest_addr
             callback(message)
-         #   self.sender_addr = ()

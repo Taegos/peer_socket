@@ -1,1 +1,1 @@
-name='peer_socket'
+from peer_socket import PeerSocket
